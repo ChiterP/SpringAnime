@@ -17,9 +17,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var springAnimationView: SpringView!
     
+    @IBOutlet weak var runButton: SpringButton!
+    
+    
     // MARK: - Public Properties
     let dataManager = DataManager()
     var animationParams = [Animation]()
+    var textAnimatioBatton = ""
+    
     
     // MARK: - Override Methods
     override func viewDidLoad() {
@@ -34,6 +39,8 @@ class ViewController: UIViewController {
         curveLb.text = springAnimationView.curve
         forceLb.text = (String(Float(springAnimationView.force)))
         durationLb.text = (String(Float(springAnimationView.duration)))
+        
+        runButton.setTitle("Run animation", for: .normal)
     }
 
     // MARK: - Private Methods
@@ -41,9 +48,16 @@ class ViewController: UIViewController {
             
         for animation in animationParams{
             springAnimationView.animation = animation.animation
+            animatioLB.text = springAnimationView.animation
+            
             springAnimationView.curve = animation.curve
+            curveLb.text = springAnimationView.curve
+            
             springAnimationView.force = animation.force
+            forceLb.text = (String(Float(springAnimationView.force)))
+            
             springAnimationView.duration = animation.duration
+            durationLb.text = (String(format: "%.2f",(Float(springAnimationView.duration))))
         }
         springAnimationView.animate()
     }
@@ -54,12 +68,13 @@ class ViewController: UIViewController {
             guard let curve = dataManager.curve.randomElement() else {return}
             guard let duration = dataManager.duration.randomElement() else {return}
             guard let force = dataManager.force.randomElement() else {return}
-            
+            textAnimatioBatton = animation
             animationParams.append(Animation.init(
                                     animation: animation,
                                     curve: curve,
                                     force: CGFloat(force),
-                                    duration: CGFloat(duration))
+                                    duration: CGFloat(duration)
+            )
             )
         }
         
@@ -71,10 +86,13 @@ class ViewController: UIViewController {
 
     }
     
+    
     // MARK: - IB Action
     @IBAction func runSpringAnimation(_ sender: SpringButton) {
         setupSpringAnimationView()
         createArrayAnimations()
+        
+        runButton.setTitle("Run \(textAnimatioBatton)", for: .normal)
         
         sender.animation = "squeeze"
         sender.animate()

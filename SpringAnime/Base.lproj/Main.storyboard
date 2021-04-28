@@ -129,6 +129,7 @@
                         <outlet property="curveLb" destination="hoN-kh-yHx" id="d4J-hL-dEg"/>
                         <outlet property="durationLb" destination="dGU-og-pJu" id="HEM-TC-YTt"/>
                         <outlet property="forceLb" destination="LXh-t8-aac" id="MXx-sY-bvC"/>
+                        <outlet property="runButton" destination="GhU-Jl-Dts" id="oTg-Fk-quI"/>
                         <outlet property="springAnimationView" destination="aro-DZ-IqR" id="M52-4U-HuD"/>
                     </connections>
                 </viewController>
