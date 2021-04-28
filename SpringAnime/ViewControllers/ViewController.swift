@@ -8,7 +8,7 @@
 import Spring
 
 class ViewController: UIViewController {
-
+    
     // MARK: - IB Outlets
     @IBOutlet weak var animatioLB: UILabel!
     @IBOutlet weak var curveLb: UILabel!
@@ -19,33 +19,34 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var runButton: SpringButton!
     
-    
-    // MARK: - Public Properties
-    let dataManager = DataManager()
-    var animationParams = [Animation]()
-    var textAnimatioBatton = ""
-    
+    // MARK: - Private Properties
+    private let dataManager = DataManager()
+    private var animationParams = [Animation]()
+    private var textAnimatioBatton = ""
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        springAnimationView.layer.cornerRadius = 15
+        
         springAnimationView.animation = "morph"
         springAnimationView.curve = "easeInOut"
         springAnimationView.force = 2
         springAnimationView.duration = 2
-    
+        
         animatioLB.text = springAnimationView.animation
         curveLb.text = springAnimationView.curve
         forceLb.text = (String(Float(springAnimationView.force)))
         durationLb.text = (String(Float(springAnimationView.duration)))
         
         runButton.setTitle("Run animation", for: .normal)
+        runButton.layer.cornerRadius = 10
     }
-
+    
     // MARK: - Private Methods
     private func setupSpringAnimationView() {
-            
+        
         for animation in animationParams{
             springAnimationView.animation = animation.animation
             animatioLB.text = springAnimationView.animation
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
             forceLb.text = (String(Float(springAnimationView.force)))
             
             springAnimationView.duration = animation.duration
-            durationLb.text = (String(format: "%.2f",(Float(springAnimationView.duration))))
+            durationLb.text = (String(Float(springAnimationView.duration)))
         }
         springAnimationView.animate()
     }
@@ -70,20 +71,13 @@ class ViewController: UIViewController {
             guard let force = dataManager.force.randomElement() else {return}
             textAnimatioBatton = animation
             animationParams.append(Animation.init(
-                                    animation: animation,
-                                    curve: curve,
-                                    force: CGFloat(force),
-                                    duration: CGFloat(duration)
+                animation: animation,
+                curve: curve,
+                force: CGFloat(force),
+                duration: CGFloat(duration)
             )
             )
         }
-        
-        print("Step one \(animationParams)")
-        print("Step Two. animation \(springAnimationView.animation)")
-        print("Step Two. curve \(springAnimationView.curve)")
-        print("Step Two. force \(springAnimationView.force)")
-        print("Step Two. duration \(springAnimationView.duration)")
-
     }
     
     

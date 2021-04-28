@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		439D3D512639B093007D4D17 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439D3D502639B093007D4D17 /* DataFile.swift */; };
+		439D3D5C2639E487007D4D17 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439D3D5B2639E487007D4D17 /* DataManager.swift */; };
 		43A96BA02638443F00D5DADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A96B9F2638443F00D5DADA /* AppDelegate.swift */; };
 		43A96BA22638443F00D5DADA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A96BA12638443F00D5DADA /* SceneDelegate.swift */; };
 		43A96BA42638443F00D5DADA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A96BA32638443F00D5DADA /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		439D3D502639B093007D4D17 /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
+		439D3D5B2639E487007D4D17 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		43A96B9C2638443F00D5DADA /* SpringAnime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringAnime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A96B9F2638443F00D5DADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43A96BA12638443F00D5DADA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		439D3D532639E157007D4D17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				439D3D502639B093007D4D17 /* DataFile.swift */,
+				439D3D5B2639E487007D4D17 /* DataManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		439D3D552639E168007D4D17 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				43A96BA32638443F00D5DADA /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		439D3D572639E177007D4D17 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				43A96BA82638444100D5DADA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		439D3D582639E1A5007D4D17 /* Srotyboards */ = {
+			isa = PBXGroup;
+			children = (
+				43A96BA52638443F00D5DADA /* Main.storyboard */,
+				43A96BAA2638444100D5DADA /* LaunchScreen.storyboard */,
+			);
+			path = Srotyboards;
+			sourceTree = "<group>";
+		};
+		439D3D592639E1B9007D4D17 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				43A96B9F2638443F00D5DADA /* AppDelegate.swift */,
+				43A96BA12638443F00D5DADA /* SceneDelegate.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		43A96B932638443F00D5DADA = {
 			isa = PBXGroup;
 			children = (
@@ -65,13 +110,11 @@
 		43A96B9E2638443F00D5DADA /* SpringAnime */ = {
 			isa = PBXGroup;
 			children = (
-				43A96B9F2638443F00D5DADA /* AppDelegate.swift */,
-				43A96BA12638443F00D5DADA /* SceneDelegate.swift */,
-				43A96BA32638443F00D5DADA /* ViewController.swift */,
-				43A96BA52638443F00D5DADA /* Main.storyboard */,
-				439D3D502639B093007D4D17 /* DataFile.swift */,
-				43A96BA82638444100D5DADA /* Assets.xcassets */,
-				43A96BAA2638444100D5DADA /* LaunchScreen.storyboard */,
+				439D3D592639E1B9007D4D17 /* Supporting */,
+				439D3D552639E168007D4D17 /* ViewControllers */,
+				439D3D582639E1A5007D4D17 /* Srotyboards */,
+				439D3D532639E157007D4D17 /* Models */,
+				439D3D572639E177007D4D17 /* Resources */,
 				43A96BAD2638444100D5DADA /* Info.plist */,
 			);
 			path = SpringAnime;
@@ -209,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43A96BA42638443F00D5DADA /* ViewController.swift in Sources */,
+				439D3D5C2639E487007D4D17 /* DataManager.swift in Sources */,
 				43A96BA02638443F00D5DADA /* AppDelegate.swift in Sources */,
 				43A96BA22638443F00D5DADA /* SceneDelegate.swift in Sources */,
 				439D3D512639B093007D4D17 /* DataFile.swift in Sources */,

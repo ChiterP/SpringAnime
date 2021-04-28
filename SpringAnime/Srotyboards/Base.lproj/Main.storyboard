@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aro-DZ-IqR" customClass="SpringView" customModule="Spring">
-                                <rect key="frame" x="54" y="140" width="306" height="211"/>
+                                <rect key="frame" x="54" y="140" width="306" height="156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BOF-eP-31e">
                                         <rect key="frame" x="8" y="30" width="179.5" height="106"/>
@@ -108,7 +108,7 @@
                                 <constraints>
                                     <constraint firstItem="BOF-eP-31e" firstAttribute="top" secondItem="aro-DZ-IqR" secondAttribute="top" constant="30" id="I5S-9s-x6L"/>
                                     <constraint firstItem="BOF-eP-31e" firstAttribute="leading" secondItem="aro-DZ-IqR" secondAttribute="leading" constant="8" id="bhT-Gy-RVD"/>
-                                    <constraint firstAttribute="bottom" secondItem="BOF-eP-31e" secondAttribute="bottom" constant="75" id="ctj-7c-nCU"/>
+                                    <constraint firstAttribute="bottom" secondItem="BOF-eP-31e" secondAttribute="bottom" constant="20" id="ctj-7c-nCU"/>
                                     <constraint firstAttribute="trailing" secondItem="BOF-eP-31e" secondAttribute="trailing" constant="118.5" id="ksz-rT-DWp"/>
                                 </constraints>
                             </view>
